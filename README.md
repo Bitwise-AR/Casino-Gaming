@@ -1,2 +1,2 @@
 # Casino-Gaming
-A casino number guessing fame using C++
+A casino number guessing game using C++
