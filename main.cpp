@@ -1,13 +1,13 @@
 #include <iostream>
-#include <string>  
+#include <string>
 #include <cstdlib> // Needed to use random numbers
 #include <ctime>
 using namespace std;
 void rules();
 int main()
 {
-    string playerName;
-    int balance; 
+    string pName;
+    int balance;
     int bettingAmount;
     int guess;
     int dice; // stores the random number
@@ -15,7 +15,7 @@ int main()
     srand(time(0)); // random generator
     cout << "\n\t\t========WELCOME TO CASINO WORLD=======\n\n";
     cout << "\n\nWhat's your Name : ";
-    getline(cin, playerName);
+    getline(cin, pName);
     cout << "\n\nEnter the starting balance to play game : $";
     cin >> balance;
     do
@@ -26,7 +26,7 @@ int main()
         // Get player's betting balance
         do
         {
-            cout << "Hey, " << playerName << ", enter amount to bet : $";
+            cout << "Hey, " << pName << ", enter amount to bet : $";
             cin >> bettingAmount;
             if (bettingAmount > balance)
                 cout << "Betting balance can't be more than current balance!\n"
@@ -54,7 +54,7 @@ int main()
         }
         cout << "\nThe winning number was : " << dice << "\n";
         cout << "\n"
-             << playerName << ", You have balance of $ " << balance << "\n";
+             << pName << ", You have balance of $ " << balance << "\n";
         if (balance == 0)
         {
             cout << "You have no money to play ";
